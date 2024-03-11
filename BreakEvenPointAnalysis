@@ -1,0 +1,323 @@
+import java.util.*;
+import java.lang.Math;
+
+public class BEP 
+{
+	public static void main(String[] args)
+	{
+		Scanner scan = new Scanner(System.in);
+		int choice=0;
+		while(choice!=1||choice!=2)
+		{
+			System.out.println("************************************************");
+			System.out.println("What type of calculation?");
+			System.out.println("Type '1' for single BEP");
+			System.out.println("Type '2' for two alternatives BEP");
+			System.out.print("Type your answer: ");
+				choice = scan.nextInt();
+			System.out.println("");
+			if(choice==1||choice==2) break;
+		}
+
+		if(choice==1) 
+		{
+			System.out.println("************************************************");
+			System.out.println("Single BEP");
+			double fixedcost, fixedincome, varcost, price, soldq, BEPQ, revenue, profit;
+			fixedcost = FixedCostCounter();
+			System.out.println("");
+			fixedincome = FixedIncomeCounter();
+			System.out.print("\nInput variable cost per product/service: ");
+				varcost = scan.nextDouble();
+			System.out.print("\nInput the selling price per product/service: ");
+				price = scan.nextDouble();
+			System.out.print("\nInput the sold product/service unit within certain period of time: ");
+				soldq = scan.nextDouble();
+
+    			BEPQ = (fixedcost-fixedincome) / (price - varcost);
+			double BEPrevenue = (fixedcost-fixedincome) + varcost;
+			revenue = soldq * price;
+			profit = (price - varcost)*(soldq) - fixedcost;
+			System.out.println("");
+    			System.out.printf("Quantity of units to reach BEP: %.0f \n", BEPQ);
+			System.out.printf("Revenue to reach BEP: %.3f \n",  BEPrevenue);
+			System.out.printf("Revenue gained: %.3f \n",  revenue);
+			System.out.printf("Profit from the company: %.3f \n", profit);
+		}
+
+		if(choice==2) 
+		{
+			System.out.println("************************************************");
+			System.out.println("Two Alternative");
+			double[] fixedcost = new double[2];
+			double[] varcost = new double[2];
+			double[] fixedincome = new double[2];
+			double[] price = new double[2];
+			double BEPQ;
+
+			for(int i=0 ; i<2 ; i++)
+			{
+				System.out.println("Option " + (i+1));
+				fixedcost[i] = FixedCostCounter();
+				System.out.println("");
+				fixedincome[i] = FixedIncomeCounter();				
+				System.out.print("\nInput variable cost per product/service: ");
+					varcost[i] = scan.nextDouble();
+				System.out.print("\nInput the selling price per product/service: ");
+					price[i] = scan.nextDouble();
+				System.out.println("");
+			}
+			double fc1 = fixedincome[0] - fixedcost[0];
+			double fc2 = fixedincome[1] - fixedcost[1];
+			double vc1 = price[0] - varcost[0];
+			double vc2 = price[1] - varcost[1];
+			BEPQ = (fc1 - fc2)/(vc2 - vc1);
+			BEPQ = Math.abs(BEPQ);
+    			System.out.printf("Quantity of units to reach BEP: %.0f\n", BEPQ);
+    			System.out.printf("If anticipated production >%.0f, select the lower variable cost option.\n", BEPQ);
+    			System.out.printf("If anticipated production <%.0f, select the higher variable cost option.\n", BEPQ);
+		}
+	}
+
+	public static double FixedCostCounter()
+	{
+		double fixedcost=0, result=0;
+		Scanner take = new Scanner(System.in);
+		System.out.print("\nInput fixed cost, how many cost is there? ");
+			int fccount = take.nextInt();
+		for(int z=0 ; z<fccount ; z++)
+		{
+			System.out.println("\nCalculator?(sc/ac/sp/ap/sf/ca/n) ");
+				String calc = take.nextLine();
+			int i=0;
+			do 
+			{
+				switch(calc)
+				{
+					case "sc":
+					case "Sc": 
+					case "sC":  
+					case "SC": 
+						result = SCompoundAmount();
+						i=1;
+						break;
+					case "ac":
+					case "Ac": 
+					case "aC":  
+					case "AC": 
+						result = ACompoundAmount();
+						i=1;
+						break;
+					case "sp":
+					case "Sp": 
+					case "sP":  
+					case "SP": 
+						result = SPresentWorth();
+						i=1;
+						break;
+					case "ap":
+					case "Ap": 
+					case "aP":  
+					case "AP": 
+						result = APresentWorth();
+						i=1;
+						break;
+					case "sf":
+					case "Sf": 
+					case "sF":  
+					case "SF": 
+						result = SinkingFund();
+						i=1;
+						break;
+					case "CA": 
+					case "Ca": 
+					case "cA": 
+					case "ca": 
+						result = CapitalAnnuityFactor();
+						i=1;
+						break;
+					case "N":
+					case "n":
+						System.out.print("Input fixed cost per period: ");
+						result = take.nextDouble();
+						i=1;
+						break;
+					case "\n":
+						break;
+					default:
+						System.out.print("input your answer: ");
+						calc = take.nextLine();
+				}
+			} while (i==0);
+			fixedcost = fixedcost + result;
+		}
+		return fixedcost;
+	}
+
+	public static double FixedIncomeCounter()
+	{
+		double fixedincome=0, result=0;
+		Scanner take = new Scanner(System.in);
+		System.out.print("Input fixed income, how many fixed income is there? ");
+			int cacount = take.nextInt();
+		for(int z=0 ; z<cacount ; z++)
+		{
+			System.out.println("\nCalculator?(sc/ac/sp/ap/sf/ca/n) ");
+				String calc = take.nextLine();
+			int i=0;
+			do 
+			{
+				switch(calc)
+				{
+					case "sc":
+					case "Sc": 
+					case "sC":  
+					case "SC": 
+						result = SCompoundAmount();
+						i=1;
+						break;
+					case "ac":
+					case "Ac": 
+					case "aC":  
+					case "AC": 
+						result = ACompoundAmount();
+						i=1;
+						break;
+					case "sp":
+					case "Sp": 
+					case "sP":  
+					case "SP": 
+						result = SPresentWorth();
+						i=1;
+						break;
+					case "ap":
+					case "Ap": 
+					case "aP":  
+					case "AP": 
+						result = APresentWorth();
+						i=1;
+						break;
+					case "sf":
+					case "Sf": 
+					case "sF":  
+					case "SF": 
+						result = SinkingFund();
+						i=1;
+						break;
+					case "CA": 
+					case "Ca": 
+					case "cA": 
+					case "ca": 
+						result = CapitalAnnuityFactor();
+						i=1;
+						break;
+					case "N":
+					case "n":
+						System.out.print("Input fixed income per period: ");
+						result = take.nextDouble();
+						i=1;
+						break;
+					case "\n":
+						break;
+					default:
+						System.out.print("input your answer: ");
+						calc = take.nextLine();
+				}
+			}while (i==0);
+			fixedincome = fixedincome + result;
+		}
+		return fixedincome;
+	}
+
+	public static double SCompoundAmount()
+	{
+		double ca=0, p=0, i=0, n=0;
+		Scanner input = new Scanner(System.in);
+		System.out.print("Input present amount: ");
+				p = input.nextDouble();
+		System.out.print("Input interest (ex. 1%): ");
+				i = input.nextDouble();
+		i=i/100;
+		System.out.print("Input length of time period: ");
+				n = input.nextDouble();		
+		double in = Math.pow((1+i),n);
+		ca = p*in;
+		return ca;
+	}
+	public static double ACompoundAmount()
+	{
+		double ca=0, a=0, i=0, n=0;
+		Scanner input = new Scanner(System.in);
+		System.out.print("Input annual amount: ");
+				a = input.nextDouble();
+		System.out.print("Input interest (ex. 1%): ");
+				i = input.nextDouble();
+		i=i/100;
+		System.out.print("Input length of time period: ");
+				n = input.nextDouble();		
+		double in = Math.pow((1+i),n);
+		ca = a*((in-1)/i);
+		return ca;
+	}
+	public static double APresentWorth()
+	{
+		double pw=0, a=0, i=0, n=0;
+		Scanner input = new Scanner(System.in);
+		System.out.print("Input annual amount: ");
+				a = input.nextDouble();
+		System.out.print("Input interest (ex. 1%): ");
+				i = input.nextDouble();
+		i=i/100;
+		System.out.print("Input length of time period: ");
+				n = input.nextDouble();		
+		double in = Math.pow((1+i),n);
+		pw = a*((in-1)/(i*in));
+		return pw;
+	}
+	public static double SinkingFund()
+	{
+		double sf=0, f=0, i=0, n=0;
+		Scanner input = new Scanner(System.in);
+		System.out.print("Input future amount: ");
+				f = input.nextDouble();
+		System.out.print("Input interest (ex. 1%): ");
+				i = input.nextDouble();
+		i=i/100;
+		System.out.print("Input length of time period: ");
+				n = input.nextDouble();		
+		double in = Math.pow((1+i),n);
+		sf = f*(i/(in-1));
+		return sf;
+	}
+	public static double SPresentWorth()
+	{
+		double pw=0, f=0, i=0, n=0;
+		Scanner input = new Scanner(System.in);
+		System.out.print("Input future amount: ");
+				f = input.nextDouble();
+		System.out.print("Input interest (ex. 1): ");
+				i = input.nextDouble();
+		i=i/100;
+		System.out.print("Input length of time period: ");
+				n = input.nextDouble();		
+		double in=Math.pow((1+i),(-n));
+		pw = f*in;
+		return pw;
+	}
+	public static double CapitalAnnuityFactor()
+	{
+		double af=0, p=0, i=0, n=0;
+		Scanner input = new Scanner(System.in);
+		System.out.print("Input present amount: ");
+				p = input.nextDouble();
+		System.out.print("Input interest (ex. 1): ");
+				i = input.nextDouble();
+		i=i/100;
+		System.out.print("Input length of time period: ");
+				n = input.nextDouble();		
+
+		double in=Math.pow((1+i),(n));
+		af = p*((i*in)/(in-1));
+		return af;
+	}
+}
