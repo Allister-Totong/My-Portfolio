@@ -1,0 +1,217 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main () {
+	int y, z, i, j, k=0, A[50], B[50], inter[50], uni[50], A_B[50], B_A[50];
+	double input;
+	
+	start:
+	y=-1;
+	while (y<0) {
+	system("Color F5");
+	//input set A
+	cout << "Insert the amount of content for set A: ";
+	cin >> y;
+	if (y<0){
+		system("Color 4F");
+		system("Color F5");
+		cout << "Please enter another number.\n";
+		}
+	}
+
+    i=0;
+	while(i<y){
+		do {
+	    	cout << "Insert a number: ";
+	    	cin >> input;
+	    	if (input < 1) {
+	    		cout << "Must be a natural number\n";
+	    		cin.clear();
+				cin.ignore(100, '\n');
+			}
+	    		
+		} 
+		while (input < 1);{
+			if (fmod(input, 1.0) == 0){
+				A[i]=(int)input;	
+				i++;	
+			}
+			else{
+				cout <<"Must be a natural number\n";
+				cin.clear();
+				cin.ignore(100, '\n');
+				continue;
+			}
+		}
+	}
+	z=-1;
+	while (z<0) {
+	system("Color F5");
+	//input set B
+	cout << "Insert the amount of content for set B: ";
+    cin >> z;
+    if (z<0){
+		system("Color 4F");
+		system("Color F5");
+		cout << "Please enter another number.\n";
+		}
+	}
+	
+	i=0;
+    while(i<z){
+    	do {
+	    	cout << "Insert a number: ";
+	    	cin >> input;
+	    	if (input < 1) {
+	    		cout << "Must be a natural number\n";
+			}
+		}   
+		while (input < 1);{ 
+			if (fmod(input, 1.0) == 0){
+    			B[i]=(int)input;
+				i++;		
+			}
+			else{
+				cout <<"Must be a natural number\n";
+				continue;
+			}
+		}
+	}
+	
+	system("cls");
+	cout<<"Set A: ";
+    for (i=0; i<y; i++){
+    	cout << A[i];
+    	if (i<y-1){
+    		cout<<", ";
+		}
+		else{
+			cout<<"\n";
+		}
+	}
+	
+	cout<<"Set B: ";
+	for(i=0; i<z; i++){
+    	cout << B[i];
+    	if (i<z-1){
+    		cout<<", ";
+		}
+		else{
+			cout<<"\n\n";
+		}
+	}
+	
+	//intersect
+	for (i=0;i<y;i++){
+		for (j=0;j<z;j++){
+			if(A[i]==B[j]){
+				inter[k]=A[i];
+				k++;
+			}
+		}
+	}
+	cout<<"A Intersect B: ";
+    for (i=0; i<k; i++){
+    	cout << inter[i];
+    	if (i<k-1){
+    		cout<<", ";
+		}
+	}	
+		
+	//union
+	cout<<"\nA Union B: ";
+    for (i=0; i<y; i++){
+    	cout << A[i];
+    	if (i<y-1){
+    		cout<<", ";
+		}
+	}
+
+	for(i=0; i<z; i++){
+		int nprint=0;
+		for(j=0; j<y; j++){
+			if (A[j]==B[i]){
+				nprint=1;
+				break;
+			}
+		}
+		if (nprint!=1){
+			cout <<", "<< B[i];
+		}
+    }
+	//A-B
+	cout<<"";
+	k=0;
+    for(i=0; i<y; i++){
+		int nprint=0;
+		for(j=0; j<z; j++){
+			if (A[i]==B[j]){
+				nprint=1;
+				break;
+			}
+		}
+		if (nprint!=1){
+			A_B[k]= A[i];
+			k++;
+		}
+    }
+    cout<<"\nA - B: ";
+    for (i=0; i<k; i++){
+    	cout << A_B[i];
+    	if (i<k-1){
+    		cout<<", ";
+		}
+	}
+    
+	//B-A
+		//B_A[]
+	cout<<"\nB - A: ";
+    for(i=0; i<z; i++){
+		int nprint=0;
+		for(j=0; j<y; j++){
+			if (A[j]==B[i]){
+				nprint=1;
+				break;
+			}
+		}
+		if (nprint!=1){
+			cout << B[i];
+    		if (i<z-1){
+    			cout<<", ";
+			}
+		}
+    }
+	
+	string answer;
+	cout << "\nWould you like to enter again?";
+	cin >> answer;
+	if (answer=="yes"||answer=="Yes") {
+		goto start;
+	}
+	else {
+		system("cls");
+		cout << "Thank you for using our program\n";
+		cout << "________00000000000___________000000000000_________\n";
+		cout << "______00000000_____00000___000000_____0000000______\n";
+		cout << "____0000000_____________000______________00000_____\n";
+		cout << "___0000000_______________0_________________0000____\n";
+		cout << "__000000____________________________________0000___\n";
+		cout << "__00000_____________________________________ 0000__\n";
+		cout << "_00000______________________________________00000__\n";
+		cout << "_00000_____________________________________000000__\n";
+		cout << "__000000_________________________________0000000___\n";
+		cout << "___0000000______________________________0000000____\n";
+		cout << "_____000000____________________________000000______\n";
+		cout << "_______000000________________________000000________\n";
+		cout << "__________00000_____________________0000___________\n";
+		cout << "_____________0000_________________0000_____________\n";
+		cout << "_______________0000_____________000________________\n";
+		cout << "_________________000_________000___________________\n";
+		cout << "_________________ __000_____00_____________________\n";
+		cout << "______________________00__00_______________________\n";
+		cout << "________________________00_________________________\n";
+		system("Color FC");
+	}
+}
