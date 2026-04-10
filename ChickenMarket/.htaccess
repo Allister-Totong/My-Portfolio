@@ -1,0 +1,34 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^index$ index.php [QSA,L]
+RewriteRule ^search$ search.php [QSA,L]
+RewriteRule ^product$ product.php [QSA,L]
+RewriteRule ^search/$ search.php [QSA,L]
+RewriteRule ^product/$ product.php [QSA,L]
+RewriteRule ^cart$ cart.php [QSA,L]
+
+RewriteRule ^api/product$ api/product.php [QSA,L]
+RewriteRule ^api/product/$ api/product.php [QSA,L]
+
+RewriteRule ^api/articles$ api/articles.php [QSA,L]
+RewriteRule ^api/articles/$ api/articles.php [QSA,L]
+
+RewriteRule ^api/productpicture$ api/productpicture.php [QSA,L]
+RewriteRule ^api/productpicture/$ api/productpicture.php [QSA,L]
+
+RewriteRule ^api/comment$ api/comment.php [QSA,L]
+RewriteRule ^api/comment/$ api/comment.php [QSA,L]
+
+RewriteRule ^api/articlepicture$ api/articlepicture.php [QSA,L]
+RewriteRule ^api/articlepicture/$ api/articlepicture.php [QSA,L]
+
+RewriteRule ^api/cart$ api/cart.php [QSA,L]
+
+RewriteRule ^api/order$ api/order.php [QSA,L]
+
+RewriteRule ^api/insertProduct$ api/insertProduct.php [QSA,L]
+
+RewriteRule ^api/orderitem$ api/orderitem.php [QSA,L]
+
+RewriteRule ^api/search$ api/search.php [QSA,L]
