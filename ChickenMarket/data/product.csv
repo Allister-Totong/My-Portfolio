@@ -1,0 +1,26 @@
+ProductID,Name,ShopName,Description,Price,AverageRating,Keyword,Pokemon,Location
+1,Pair of chicken,Peternakan Nasional, A pair of 2 domesticated chickens (Gallus gallus domesticus)male and female. Raised in free range environment.,70,4.2,"pair, domestic, male, female",Ditto,Jakarta
+2,Rooster,Theodore's Farm Texas,Fully growned domesticated rooster.,25,3,"rooster, domestic, male",Pikachu,Chicago
+3,White Chicken,Arizona Ranch,Leghorn Chicken a.k.a. white chicken are white heathered chicken originating in Tuscany,40,3.8,white,Charizard,Vienna
+4,Cemani Chicken,Ayam Indo,The Cemani Chicken is a rare breed of chicken from Indonesia. They have a dominant gene that causes hyperpigmentation,29,4.2,black,Arceus,Berlin
+5,Mountain Chicken,Forest of Dominica,"Leptodactylus fallax, commonly known as the mountain chicken or giant ditch frog,  is a critically endangered species of frog that is native to the Caribbean islands of Dominica and Montserrat.",30,5,mountain,Squirtle,Moscow
+6,Hen,Theodore's Farm Texas,Female domesticated chickens (Gallus gallus domesticus). ,30,4.5,"hen, domestic, female",Metapod,Paris
+7,Kentucky Chicken,KFC,7 Winger (7 Drumette + 7 Wingette),25,5,kentucky,Weedle,London
+8,Free Range Farm Chicken,Theodore's Farm Texas,Buy 1 chicken that are raised free ranged.,30,4.9,"free range, domestic",Rattata,Madrid
+9,Onagadori Rooster,Alexander Pet Shop,Chicken pet,50,0,pet,Spearow,Tokyo
+10,Teriyaki Chick,Alexander Pet Shop,Chicken pet,50,0,pet,Bulbasaur,Brussels
+11,Popeyes the Sailor Bird,Alexander Pet Shop,Chicken pet,50,0,pet,Jigglypuff,Geneva
+12,Napoleon Bone-apart,Alexander Pet Shop,Chicken pet,50,0,pet,Zubat,Rome
+13,Poultrygeist,Alexander Pet Shop,Chicken pet,50,0,pet,Wigglytuff,New York
+14,Chicken Jockey,Steve,Merchandise from the big hit movie Minecraft,40,0,merchendise,Gloom,Stockholm
+15,Sanitized Chickens,Unsanitized,"le gang consisting of Juan, Mario, Willy, Karolus, Jimmy, Sylphie on their way to adventure",250,0,flock,Diglett,Helsinki
+16,Tomoro Chickens,BKI,"le boyz consisting of Ryufath, Imam, Christopher",150,0,flock,Meowth,Mexico City
+17,Baby chick,Arizona Ranch,10 baby chicks,100,0,baby,Magikarp,Istanbul
+18,Eggs,Arizona Ranch,a dozen of eggs,20,0,egg,Psyduck,Jerusalem
+19,Eggs,Ayam Indo,a dozen of eggs,18,0,egg,Totodile,Vatican
+20,Flock of Chickens,Ayam Indo,Flock of Chickens,45,0,"domestic, flock",Rattata,Beijing
+21,Goose Chicken,BKI,Suspiciously goose shaped chicken.,40,0,domestic,Metapod,Cairo
+22,Organic Eggs,Theodore's Farm Texas,fresh eggs,50,0,egg,Geodude,Singapore
+23,White Hen,Theodore's Farm Texas,A female white feathered chicken raised in the pasture.,37,0,hen,Torchic ,Toronto
+24,Brown Hen,Unsanitized,Brown Hen,40,0,hen,Pidgey  ,Hong Kong
+25,Fighter Chicken,Unsanitized,Roosters that are trained to fight.,40,0,rooster,Spinarak,Belgrade

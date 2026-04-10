@@ -1,0 +1,27 @@
+UserID,Name,Email,Role,Password
+1,admin,admin@gmail.com,1,examplepass1
+2,Peternakan Nasional,user@gmail.com,2,examplepass1
+3,Theodore's Farm Texas,user@gmail.com,2,examplepass1
+4,Arizona Ranch,user@gmail.com,2,examplepass1
+5,Ayam Indo,user@gmail.com,2,examplepass1
+6,Forest of Dominica,user@gmail.com,2,examplepass1
+7,KFC,user@gmail.com,2,examplepass1
+8,Alexander Pet Shop,user@gmail.com,2,examplepass1
+9,Steve,user@gmail.com,2,examplepass1
+10,Unsanitized,user@gmail.com,2,examplepass1
+11,BKI,user@gmail.com,2,examplepass1
+12,Alfonso,user@gmail.com,3,examplepass1
+13,Snake,user@gmail.com,3,examplepass1
+14,Duran,user@gmail.com,3,examplepass1
+15,KFC,user@gmail.com,3,examplepass1
+16,Pakde,user@gmail.com,3,examplepass1
+17,Gurney,user@gmail.com,3,examplepass1
+18,Eve,user@gmail.com,3,examplepass1
+19,Mark,user@gmail.com,3,examplepass1
+20,Paul,user@gmail.com,3,examplepass1
+21,Dante,user@gmail.com,3,examplepass1
+22,Juan,user@gmail.com,3,examplepass1
+23,Mario,user@gmail.com,3,examplepass1
+24,Willy,user@gmail.com,3,examplepass1
+25,Karolus,user@gmail.com,3,examplepass1
+26,Jimmy,user@gmail.com,3,examplepass1

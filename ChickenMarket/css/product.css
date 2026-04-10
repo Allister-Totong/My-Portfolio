@@ -1,0 +1,35 @@
+.hero-image{
+    height: 100px;
+}
+
+.container {
+    grid-template-columns: 30% auto;
+    gap: 10px;
+    padding: 10px;
+    background-color: #81D3EB;
+    margin: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.picture {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.pokemonCard {
+    grid-template-columns: 20% auto;
+    gap: 10px;
+    padding: 10px;
+    background-color: #81D3EB;
+    margin: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.review{
+    background-color: #81D3EB;
+    padding: 10px;
+    max-height: 250px;
+    margin: 10px;
+}

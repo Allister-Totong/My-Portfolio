@@ -1,0 +1,40 @@
+body {
+    background-color: #E2E9EB;
+    font-family: Arial, sans-serif;
+    width: 100%
+}
+
+h1 {
+    padding: 10px;
+    text-align: center;
+    background-color: #8B0015;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    background-color: #AB0520;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}

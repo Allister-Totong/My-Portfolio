@@ -1,0 +1,176 @@
+.overlay{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.overlay p{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.overlay h1{
+    color: white;
+}
+
+.hero-image{
+    height: 200px;
+    object-fit: cover;
+}
+
+.container {
+    display: grid;
+}
+
+.flex-container {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height:60px;
+    background: #0C234B;
+    z-index: 10;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.left-navbar{
+    top: 10px;
+    left: 5px;
+    position: absolute;
+    font-size: 30px;
+}
+
+.right-navbar{
+    top: 10px;
+    right: 5px;
+    position: absolute;
+    font-size: 30px;
+}
+
+.fa-bars{
+    color: white;
+    display: none;
+    visibility: hidden;
+}
+
+.fa-arrow-right-from-bracket{
+    visibility: hidden;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+    top:5px;
+    left: 50%;
+    position: absolute;
+}
+
+  
+/* Change the color of links on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style the search box inside the navigation bar */
+.input[type=text] {
+    float: right;
+    padding: 9px;
+    border: none;
+    top: 60px;
+    position: absolute;
+    width: 100%;
+}
+
+.search-icon {
+    top: 12px;
+    right: 120px;
+    position: absolute;
+    font-size: 30px;
+    color: white;
+}
+
+.content {
+    padding-top: 60px;
+    text-align: center;
+}
+
+.section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 10px;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+.decorbox{
+    padding: 10px;
+    background-color: #81D3EB;
+    margin: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.delete-btn{
+    background-color: rgb(231, 50, 50);
+}
+
+.save-btn{
+    background-color: rgb(65, 231, 50);
+}
+
+footer{
+    background-color: #444;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p,a{
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    .fa-bars {
+        visibility: visible;
+    }
+    .fa-arrow-right-from-bracket{
+        visibility: visible;
+    }
+    .left-navbar{
+        font-size: 35px;
+        top: 10px;
+        visibility: hidden;
+    }
+    .right-navbar{
+        font-size: 35px;
+        top: 10px;
+        visibility: hidden;
+    }
+    .search-icon{
+        right: 70px;
+    }
+}

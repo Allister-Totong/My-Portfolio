@@ -1,0 +1,35 @@
+.result{
+    margin-top: 10px;
+}
+
+.recent-searches{
+    margin-top: 60px;
+}
+
+.thumbnail{
+    display: grid;
+    grid-template-columns: 120px auto;
+    background-color: #81D3EB;    
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.box-img{
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.detail h3{
+    color: #000;
+}
+.detail p{
+    color: #000;
+}
+
+.search-btn{
+    margin-top: 7px;
+    right: 10px;
+    position: absolute;
+}
